@@ -7,9 +7,9 @@
 
 
 import React, {
-    PropTypes,
     Component,
 } from 'react'
+import PropTypes from 'prop-types';
 import {
     View,
     requireNativeComponent,
@@ -69,7 +69,7 @@ export default class Barcode extends Component {
     }
 
     _handleAppStateChange = (currentAppState) => {
-        if(currentAppState !== 'active' ) {
+        if (currentAppState !== 'active') {
             this.stopScan()
         }
         else {
